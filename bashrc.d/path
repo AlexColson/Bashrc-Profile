@@ -1,0 +1,16 @@
+# Program search path (PATH)
+
+# Perso
+./
+
+# Unix
+/bin
+/sbin
+/usr/bin
+/usr/sbin
+/usr/local/bin
+/usr/local/sbin
+
+# Solaris 10
+/usr/ccs/bin
+/usr/ucb

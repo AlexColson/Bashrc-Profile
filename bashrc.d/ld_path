@@ -1,0 +1,16 @@
+# Library search path (LD_LIBRARY_PATH)
+
+# Perso
+./
+./lib
+
+# Unix
+/lib
+/var/lib
+/usr/lib
+/usr/local/lib
+/usr/share/lib
+
+# Solaris 10
+/usr/ccs/lib
+

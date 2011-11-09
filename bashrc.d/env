@@ -1,0 +1,19 @@
+# environment variables
+# export is done automatically based on regular expression /^(.*)=.*/
+
+# Prompt
+PS1="[\033[33m\t\033[0m][\u@\h:\w]\$(parse_git_branch_and_add_brackets)\$(git_status)\$ "
+
+# Editor
+EDITOR=vim
+
+# No timeout
+TMOUT=0
+
+# Bash history
+HISTFILE=~/.bash_history
+HISTFILESIZE=100
+
+# internet proxy
+#http_proxy="<your proxy here>"
+#ftp_proxy="<your proxy here>"

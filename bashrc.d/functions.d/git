@@ -1,0 +1,9 @@
+function parse_git_branch_and_add_brackets {
+    git branch --color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+}
+
+function git_status {
+    if [ -d .git ]; then
+        git status -s | awk '{print $1}' | sort | uniq -c | sed -e 's/??/!/' -e 's/A/+/' -e 's/M/*/' -e 's/D/-/' | awk '{print $1$2}' | xargs -r | sed 's/\(.*\)/(\1)/'
+    fi
+}

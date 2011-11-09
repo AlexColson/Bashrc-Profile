@@ -1,0 +1,10 @@
+# bash functions
+
+#don't go further if nothing exist
+[ ! -d ${PRF_DIR}/functions.d/ ] && return
+
+# read all files present in the functions.d directory
+for FILE in $(ls ${PRF_DIR}/functions.d/* | grep -v \.bak)
+do
+  . ${FILE}
+done

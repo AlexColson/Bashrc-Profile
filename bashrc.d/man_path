@@ -1,0 +1,15 @@
+# Manual search path (MANPATH)
+
+# Perso
+./
+./man
+
+# Unix
+/man
+/usr/man
+/usr/share/man
+/usr/local/man
+/usr/local/share/man
+
+# Solaris 10
+
