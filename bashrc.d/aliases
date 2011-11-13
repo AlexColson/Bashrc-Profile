@@ -1,5 +1,5 @@
 # Aliases
 
-ls:ls -F --color=auto
+ls:ls -F -G
 ll:ls -l
 la:ls -al
