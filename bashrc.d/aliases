@@ -3,3 +3,5 @@
 ls:ls -F -G
 ll:ls -l
 la:ls -al
+godev:ssh -l alex 192.168.8.3
+gotv:ssh -l minttv 192.168.8.3
