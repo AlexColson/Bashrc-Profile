@@ -5,7 +5,7 @@ function parse_git_branch_and_add_brackets {
 function git_status {
     if [ -d .git ]; then
 	if [ "`uname`" = "Darwin" ]; then
-        	git status -s | awk '{print $1}' | sort | uniq -c | sed -e 's/??/!/' -e 's/A/+/' -e 's/M/*/' -e 's/D/-/' | awk '{print $1$2}' | sed 's/\(.*\)/(\1)/'
+        	git status -s | awk '{print $1}' | sort | uniq -c | sed -e 's/??/!/' -e 's/A/+/' -e 's/M/*/' -e 's/D/-/' | awk '{print $1$2}' | sed 's/\(.*\)/(\1)/' | xargs -t | sed -e 's/ //'
 	else
         	git status -s | awk '{print $1}' | sort | uniq -c | sed -e 's/??/!/' -e 's/A/+/' -e 's/M/*/' -e 's/D/-/' | awk '{print $1$2}' | xargs -r | sed 's/\(.*\)/(\1)/'
 	fi
